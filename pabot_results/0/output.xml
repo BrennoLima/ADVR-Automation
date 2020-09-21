@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.3 on win32)" generated="20200921 10:29:20.447" rpa="false">
+<suite id="s1" name="Tests" source="C:\Development\RobotScripts\ADVR\Tests">
+<suite id="s1-s1" name="AdventuresTrips" source="C:\Development\RobotScripts\ADVR\Tests\AdventuresTrips.robot">
+<test id="s1-s1-t1" name="All Adventures and Trips Must Open Details">
+<kw name="Begin Web Test" library="common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200921 10:29:20.927" level="INFO">Opening browser 'gc' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200921 10:29:20.926" endtime="20200921 10:29:24.555"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200921 10:29:24.556" endtime="20200921 10:29:26.689"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:29:20.926" endtime="20200921 10:29:26.689"></status>
+</kw>
+<kw name="All Adventures Must Open Details" library="advrApp">
+<kw name="Load" library="AdventuresPage">
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<msg timestamp="20200921 10:29:26.692" level="INFO">Opening url 'https://master.d2c26cs6suk604.amplifyapp.com'</msg>
+<status status="PASS" starttime="20200921 10:29:26.692" endtime="20200921 10:30:26.293"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:29:26.691" endtime="20200921 10:30:26.294"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200921 10:30:27.298" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200921 10:30:26.295" endtime="20200921 10:30:27.299"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${LandingPage-Title}</arg>
+</arguments>
+<status status="PASS" starttime="20200921 10:30:27.299" endtime="20200921 10:30:27.342"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:30:26.294" endtime="20200921 10:30:27.342"></status>
+</kw>
+<kw name="Open Adventures" library="NavBar">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${NavBar-Adventures-Link}</arg>
+</arguments>
+<msg timestamp="20200921 10:30:27.344" level="INFO">Clicking link 'id=adventures'.</msg>
+<status status="PASS" starttime="20200921 10:30:27.343" endtime="20200921 10:30:27.560"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:30:27.343" endtime="20200921 10:30:27.560"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:29:26.690" endtime="20200921 10:30:27.560"></status>
+</kw>
+<kw name="Verify Adventure 0" library="AdventuresPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${Adventure0-Link}</arg>
+</arguments>
+<msg timestamp="20200921 10:30:27.562" level="INFO">Clicking link '/adventures/0'.</msg>
+<status status="PASS" starttime="20200921 10:30:27.561" endtime="20200921 10:30:27.673"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200921 10:30:28.675" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200921 10:30:27.673" endtime="20200921 10:30:28.675"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${Adventure0-Title}</arg>
+</arguments>
+<status status="PASS" starttime="20200921 10:30:28.675" endtime="20200921 10:30:28.705"></status>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20200921 10:30:28.705" endtime="20200921 10:30:28.917"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:30:27.560" endtime="20200921 10:30:28.917"></status>
+</kw>
+<kw name="Verify Adventure 1" library="AdventuresPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${Adventure1-Link}</arg>
+</arguments>
+<msg timestamp="20200921 10:30:28.919" level="INFO">Clicking link '/adventures/1'.</msg>
+<status status="PASS" starttime="20200921 10:30:28.918" endtime="20200921 10:30:29.090"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200921 10:30:30.092" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200921 10:30:29.090" endtime="20200921 10:30:30.092"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${Adventure1-Title}</arg>
+</arguments>
+<status status="PASS" starttime="20200921 10:30:30.093" endtime="20200921 10:30:30.116"></status>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20200921 10:30:30.117" endtime="20200921 10:30:30.298"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:30:28.918" endtime="20200921 10:30:30.298"></status>
+</kw>
+<kw name="Verify Adventure 2" library="AdventuresPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${Adventure2-Link}</arg>
+</arguments>
+<msg timestamp="20200921 10:30:30.303" level="INFO">Clicking link '/adventures/2'.</msg>
+<status status="PASS" starttime="20200921 10:30:30.302" endtime="20200921 10:30:30.439"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200921 10:30:31.442" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200921 10:30:30.440" endtime="20200921 10:30:31.443"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${Adventure2-Title}</arg>
+</arguments>
+<status status="PASS" starttime="20200921 10:30:31.443" endtime="20200921 10:30:31.465"></status>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20200921 10:30:31.465" endtime="20200921 10:30:31.631"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:30:30.299" endtime="20200921 10:30:31.633"></status>
+</kw>
+<kw name="Verify Adventure 3" library="AdventuresPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${Adventure3-Link}</arg>
+</arguments>
+<msg timestamp="20200921 10:30:31.636" level="INFO">Clicking link '/adventures/3'.</msg>
+<status status="PASS" starttime="20200921 10:30:31.636" endtime="20200921 10:30:31.853"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200921 10:30:32.856" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200921 10:30:31.854" endtime="20200921 10:30:32.857"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${Adventure3-Title}</arg>
+</arguments>
+<status status="PASS" starttime="20200921 10:30:32.858" endtime="20200921 10:30:32.880"></status>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20200921 10:30:32.881" endtime="20200921 10:30:32.916"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:30:31.634" endtime="20200921 10:30:32.917"></status>
+</kw>
+<kw name="Verify Adventure 4" library="AdventuresPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${Adventure4-Link}</arg>
+</arguments>
+<msg timestamp="20200921 10:30:32.924" level="INFO">Clicking link '/adventures/4'.</msg>
+<status status="PASS" starttime="20200921 10:30:32.923" endtime="20200921 10:30:33.163"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200921 10:30:34.170" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200921 10:30:33.167" endtime="20200921 10:30:34.170"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${Adventure4-Title}</arg>
+</arguments>
+<status status="PASS" starttime="20200921 10:30:34.171" endtime="20200921 10:30:34.186"></status>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20200921 10:30:34.186" endtime="20200921 10:30:34.294"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:30:32.919" endtime="20200921 10:30:34.294"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:29:26.690" endtime="20200921 10:30:34.294"></status>
+</kw>
+<kw name="All Trips Must Open Details" library="advrApp">
+<kw name="Load" library="TripsPage">
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<msg timestamp="20200921 10:30:34.301" level="INFO">Opening url 'https://master.d2c26cs6suk604.amplifyapp.com'</msg>
+<status status="PASS" starttime="20200921 10:30:34.300" endtime="20200921 10:30:34.643"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:30:34.297" endtime="20200921 10:30:34.645"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200921 10:30:35.652" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200921 10:30:34.647" endtime="20200921 10:30:35.653"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${LandingPage-Title}</arg>
+</arguments>
+<status status="PASS" starttime="20200921 10:30:35.654" endtime="20200921 10:30:35.681"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:30:34.646" endtime="20200921 10:30:35.681"></status>
+</kw>
+<kw name="Open Trips" library="NavBar">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${NavBar-Trips-Link}</arg>
+</arguments>
+<msg timestamp="20200921 10:30:35.687" level="INFO">Clicking link 'id=trips'.</msg>
+<status status="PASS" starttime="20200921 10:30:35.686" endtime="20200921 10:30:35.847"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:30:35.682" endtime="20200921 10:30:35.849"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:30:34.296" endtime="20200921 10:30:35.850"></status>
+</kw>
+<kw name="Verify Trip 0" library="TripsPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${Trips0-Link}</arg>
+</arguments>
+<msg timestamp="20200921 10:30:35.854" level="INFO">Clicking link '/trips/0'.</msg>
+<status status="PASS" starttime="20200921 10:30:35.853" endtime="20200921 10:30:35.955"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200921 10:30:36.957" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200921 10:30:35.956" endtime="20200921 10:30:36.957"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${Trips0-Title}</arg>
+</arguments>
+<status status="PASS" starttime="20200921 10:30:36.957" endtime="20200921 10:30:36.973"></status>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20200921 10:30:36.973" endtime="20200921 10:30:37.062"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:30:35.851" endtime="20200921 10:30:37.062"></status>
+</kw>
+<kw name="Verify Trip 1" library="TripsPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${Trips1-Link}</arg>
+</arguments>
+<msg timestamp="20200921 10:30:37.063" level="INFO">Clicking link '/trips/1'.</msg>
+<status status="PASS" starttime="20200921 10:30:37.063" endtime="20200921 10:30:37.130"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200921 10:30:38.131" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200921 10:30:37.131" endtime="20200921 10:30:38.131"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${Trips1-Title}</arg>
+</arguments>
+<status status="PASS" starttime="20200921 10:30:38.131" endtime="20200921 10:30:38.142"></status>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20200921 10:30:38.142" endtime="20200921 10:30:38.242"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:30:37.063" endtime="20200921 10:30:38.242"></status>
+</kw>
+<kw name="Verify Trip 2" library="TripsPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${Trips2-Link}</arg>
+</arguments>
+<msg timestamp="20200921 10:30:38.243" level="INFO">Clicking link '/trips/2'.</msg>
+<status status="PASS" starttime="20200921 10:30:38.243" endtime="20200921 10:30:38.331"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200921 10:30:39.334" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200921 10:30:38.331" endtime="20200921 10:30:39.334"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${Trips2-Title}</arg>
+</arguments>
+<status status="PASS" starttime="20200921 10:30:39.334" endtime="20200921 10:30:39.345"></status>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20200921 10:30:39.345" endtime="20200921 10:30:39.359"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:30:38.243" endtime="20200921 10:30:39.359"></status>
+</kw>
+<kw name="Verify Trip 3" library="TripsPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${Trips3-Link}</arg>
+</arguments>
+<msg timestamp="20200921 10:30:39.361" level="INFO">Clicking link '/trips/3'.</msg>
+<status status="PASS" starttime="20200921 10:30:39.361" endtime="20200921 10:30:39.506"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200921 10:30:40.508" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200921 10:30:39.506" endtime="20200921 10:30:40.508"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${Trips3-Title}</arg>
+</arguments>
+<status status="PASS" starttime="20200921 10:30:40.508" endtime="20200921 10:30:40.522"></status>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20200921 10:30:40.522" endtime="20200921 10:30:40.549"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:30:39.360" endtime="20200921 10:30:40.550"></status>
+</kw>
+<kw name="Verify Trip 4" library="TripsPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${Trips4-Link}</arg>
+</arguments>
+<msg timestamp="20200921 10:30:40.553" level="INFO">Clicking link '/trips/4'.</msg>
+<status status="PASS" starttime="20200921 10:30:40.552" endtime="20200921 10:30:40.651"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200921 10:30:41.655" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200921 10:30:40.652" endtime="20200921 10:30:41.656"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${Trips4-Title}</arg>
+</arguments>
+<status status="PASS" starttime="20200921 10:30:41.656" endtime="20200921 10:30:41.692"></status>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20200921 10:30:41.692" endtime="20200921 10:30:41.736"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:30:40.551" endtime="20200921 10:30:41.738"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:30:34.295" endtime="20200921 10:30:41.740"></status>
+</kw>
+<kw name="End Web Test" library="common" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200921 10:30:41.745" endtime="20200921 10:30:43.975"></status>
+</kw>
+<status status="PASS" starttime="20200921 10:30:41.743" endtime="20200921 10:30:43.975"></status>
+</kw>
+<doc>This test will check every link from the Adventures and Trips components</doc>
+<status status="PASS" starttime="20200921 10:29:20.925" endtime="20200921 10:30:43.975" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200921 10:29:20.615" endtime="20200921 10:30:43.976"></status>
+</suite>
+<status status="PASS" starttime="20200921 10:29:20.449" endtime="20200921 10:30:43.979"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" id="s1-s1" name="AdventuresTrips">Tests.AdventuresTrips</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
